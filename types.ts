@@ -1,10 +1,16 @@
-import { OptionalId } from "mongodb";
+export type apiPhone = {
+  is_valid: boolean;
+  country: string;
+};
 
-export type Contact = {
-  id: string;
+export type apiCountry = {
   name: string;
-  phone: string;
-  email: string;
-}
+  capital: string;
+};
 
-export type ContactDB = OptionalId<Omit<Contact,"id">>;
+export type apiCity = {
+  name: string;
+  latitude: string;
+  longitude: string;
+  country: string;
+};
